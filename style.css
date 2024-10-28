@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'KoddiUDOnGothic-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/KoddiUDOnGothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'KoddiUDOnGothic-Regular', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+#game-container {
+    position: relative;
+    width: 90vw;
+    height: 500px;
+    margin-top: 50px;
+    border: none;
+    /* overflow: hidden; 삭제하여 텍스트가 뷰포트 밖으로 나갈 수 있도록 */
+}
+
+svg {
+    position: absolute;
+    top: 85%; /* 하단으로부터의 위치를 비율로 조절 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* X축뿐만 아니라 Y축도 중앙 정렬 */
+    width: 90%;
+    max-width: 600px;
+    min-width: 300px;
+    height: auto;
+}
+
+#ball, #text-ball {
+    position: absolute;
+    bottom: 60px;
+    width: 40px;
+    height: 40px;
+    background-color: #00E191;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+#text-ball {
+    background: none;
+    width: 90%;
+    max-width: 600px;
+    min-width: 300px;
+    height: auto;
+    font-size: calc(16px + 2vw);
+    color: #000;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-break: keep-all; /* 단어 중간에서 끊기지 않도록 설정 */
+}
+
+@media (min-width: 1200px) {
+    #text-ball {
+        font-size: 60px; /* 화면이 넓어질 경우 고정된 큰 폰트 크기 */
+    }
+}
+
+#jump-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    transition: background-color 0.2s ease;
+    margin-bottom: 20px;
+}
+
+#jump-button:active {
+    background-color: #00E191;
+}
+
+#input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 600px;
+    min-width: 300px;
+    padding: 0 20px; /* 좌우에 20px 마진 추가 */
+    box-sizing: border-box;
+}
+
+#text-input {
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#clear-text {
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: red;
+}

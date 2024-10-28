@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트램펄린 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="input-container">
+    <input id="text-input" type="text" maxlength="60" placeholder="당신의 걱정을 작성해주세요" />
+    <span id="clear-text">X</span>
+</div>
+
+<div id="game-container">
+    <div id="ball"></div>
+    <div id="text-ball"></div>
+    <svg id="trampoline" viewBox="0 0 600 180" preserveAspectRatio="xMidYMid meet">
+        <path id="trampoline-path" d="M0,90 Q300,90 600,90" stroke="black" stroke-width="4" fill="transparent"/>
+    </svg>
+</div>
+<button id="jump-button">JUMP!</button>
+
+
+<script src="script.js"></script>
+</body>
+</html>
